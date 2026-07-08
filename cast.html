@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>キャスト紹介｜Saltalia</title>
+  <meta name="description" content="Saltalia キャスト紹介ページ。牡羊座の星導、ヘレ・クリュソスのプロフィールを掲載。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Shippori+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+  <div class="sky" aria-hidden="true">
+    <canvas id="starCanvas"></canvas>
+    <div class="sky-glow-1"></div>
+    <div class="sky-glow-2"></div>
+  </div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html"><i>✦</i>SALTALIA</a>
+    <div class="header-meta">
+      <span class="label">CONSTELLATION BANQUET</span>
+      <span class="clock" id="clock">--:--:--</span>
+      <button class="menu-btn" type="button" aria-label="メニュー" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="menu" aria-label="メインメニュー">
+    <div class="menu-nav">
+      <a href="index.html#story"><em>01</em>世界観</a>
+      <a href="index.html#lore"><em>02</em>ことば</a>
+      <a href="index.html#cast"><em>03</em>星導と星影</a>
+      <a href="index.html#event"><em>04</em>開催概要</a>
+      <a href="index.html#visit"><em>05</em>来訪案内</a>
+      <a href="cast.html"><em>––</em>キャスト詳細</a>
+    </div>
+    <div class="menu-aside">
+      <p>CONSTELLATION<br>ROLEPLAY EVENT</p>
+      <p><strong>12TH &amp; 24TH</strong><br>MONTHLY 22:00 – 23:00</p>
+      <p>SOMEWHERE IN<br>THE NIGHT SKY</p>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <p class="hero-word" aria-hidden="true">CAST</p>
+      <p class="hero-eyebrow">CAST INTRODUCTION</p>
+      <h1 class="reveal is-visible">キャスト紹介</h1>
+      <p class="lead-center reveal is-visible">
+        星々の意志を宿し、宴の夜に現れる者たち。<br>
+        現在公開中のキャストは、ヘレ・クリュソス。
+      </p>
+    </section>
+
+    <!-- ==================== helle ==================== -->
+    <section class="chapter cast-detail" id="helle">
+      <article class="cast-panel">
+        <div class="cast-figure reveal">
+          <span class="sign">ARIES ♈</span>
+          <img src="assets/helle.png" alt="ヘレ・クリュソスの正面・背面・側面の資料画像" />
+        </div>
+        <div class="cast-info">
+          <p class="role reveal">ARIES — 牡羊座の星導</p>
+          <h2 class="cast-name reveal">ヘレ・クリュソス</h2>
+          <p class="cast-name-en reveal">Helle Chrysos</p>
+          <p class="cast-catch reveal">あたたかく、寂しく、まっすぐに。<br>夜に迷ったあなたを迎える、星の少年。</p>
+          <p class="reveal">
+            人懐っこく、少し甘えるような口調で距離を縮めてくる少年。
+            最初は静かで儚げに、けれど言葉を重ねるうちにだんだんと心を開き、
+            嬉しそうにはしゃぎながら、まっすぐな瞳で君の話を聞きたがる。
+          </p>
+          <p class="reveal">
+            誰かを大切に思う気持ちは、たしかに残っている。なのに、肝心な記憶だけが欠けている。
+            明るく振る舞っていても、ふとした瞬間に寂しさがにじむのは、
+            「覚えていたいのに、忘れてしまう」——そんな切なさを、ずっと抱えているから。
+          </p>
+          <p class="reveal">
+            ほしるべとして来訪者を導く存在でありながら、彼自身もまた、星に何かを捧げている。
+            だからだろうか。楽しい時間が終わりに近づくと、「もう帰っちゃうの？」と、
+            別れを惜しむ感情を隠せなくなる。忘れることを、誰よりも怖がっている少年。
+          </p>
+
+          <div class="profile reveal">
+            <div><span>星座</span><strong>牡羊座 ♈</strong></div>
+            <div><span>一人称</span><strong>ぼく</strong></div>
+            <div><span>性別</span><strong>男性</strong></div>
+            <div><span>年齢</span><strong>17歳前後の少年のような姿</strong></div>
+            <div><span>性格</span><strong>優しい / 人懐っこい / 寂しがり / 甘えたがり</strong></div>
+            <div><span>役割</span><strong>夜に迷った人間を導く、ほしるべ</strong></div>
+          </div>
+
+          <div class="quote reveal">
+            <p>「ようこそ、来訪者さん。ぼくは牡羊座のほしるべ、ヘレ・クリュソス。」</p>
+            <p>「今日はここで、君のことをたくさん教えてほしいな。名前も、好きなことも、忘れたくないことも。」</p>
+            <p>「……ふふ、大丈夫。ぼくがちゃんと、君のそばで聞いているから。」</p>
+          </div>
+
+          <div class="notice reveal">
+            <h3>忘れてしまっても——</h3>
+            <p>君を大切に思ったことだけは、きっと残っている。覚えていたい。忘れたくない。だから今、君のことを聞かせて。</p>
+          </div>
+
+          <ul class="cast-tags reveal">
+            <li>人懐っこい</li>
+            <li>甘えたがり</li>
+            <li>寂しがり</li>
+            <li>少し儚い</li>
+            <li>感情が素直</li>
+            <li>忘れることを怖がっている</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==================== event ==================== -->
+    <section class="chapter" id="event">
+      <div class="chapter-head reveal">
+        <p class="chapter-num">EVENT INFO</p>
+        <h2 class="chapter-title">開催概要<small>Event Information</small></h2>
+      </div>
+      <div class="event-layout">
+        <div class="reveal">
+          <p class="event-date">12<b>th</b> &amp; 24<b>th</b><small>MONTHLY — 22:00 / 23:00 JST</small></p>
+          <p class="event-desc">2対2で星導と来訪者が会話する体験型ロールプレイイベント。1ローテ20分で、開催中に2回のローテーションを行う。</p>
+        </div>
+        <ol class="timeline reveal" style="--d:.15s">
+          <li><time>21:50 – 21:52</time><p>リクイン受付</p></li>
+          <li><time>22:00</time><p>イベント開始</p></li>
+          <li><time>23:00</time><p>イベント終了</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="back-center reveal">
+      <a class="btn btn-gold" href="index.html">トップページへ戻る<span class="arrow">→</span></a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-word" aria-hidden="true">SALTALIA</p>
+    <div class="footer-bar">
+      <p>© SALTALIA — 星々の言葉に、耳を傾けて。</p>
+      <nav aria-label="フッターメニュー">
+        <a href="index.html#story">世界観</a>
+        <a href="index.html#cast">星導</a>
+        <a href="index.html#event">開催概要</a>
+      </nav>
+      <a class="to-top" href="#top">BACK TO TOP ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
