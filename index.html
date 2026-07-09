@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saltalia｜星導たちの宴</title>
+  <meta name="description" content="星座の意志が形を持った存在、星導と来訪者が語り合う星空の宴 Saltalia 公式サイト" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Shippori+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="is-locked">
+
+  <!-- loader -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader-mark">
+      <p class="word">
+        <span style="animation-delay:.05s">S</span><span style="animation-delay:.1s">A</span><span style="animation-delay:.15s">L</span><span style="animation-delay:.2s">T</span><span style="animation-delay:.25s">A</span><span style="animation-delay:.3s">L</span><span style="animation-delay:.35s">I</span><span style="animation-delay:.4s">A</span>
+      </p>
+      <div class="loader-line"></div>
+    </div>
+  </div>
+
+  <div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+  <div class="sky" aria-hidden="true">
+    <canvas id="starCanvas"></canvas>
+    <div class="sky-glow-1"></div>
+    <div class="sky-glow-2"></div>
+  </div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html"><i>✦</i>SALTALIA</a>
+    <div class="header-meta">
+      <span class="label">CONSTELLATION BANQUET</span>
+      <span class="clock" id="clock">--:--:--</span>
+      <button class="menu-btn" type="button" aria-label="メニュー" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- fullscreen menu -->
+  <nav class="menu" aria-label="メインメニュー">
+    <div class="menu-nav compact-nav">
+      <a href="#story"><em>01</em>世界観</a>
+      <a href="#invitation"><em>02</em>招待状</a>
+      <a href="#lore"><em>03</em>ことば</a>
+      <a href="#cast"><em>04</em>星導たち</a>
+      <a href="#event"><em>05</em>開催概要</a>
+      <a href="#visit"><em>06</em>来訪案内</a>
+      <a href="cast.html"><em>––</em>キャスト紹介（準備中）</a>
+    </div>
+    <div class="menu-aside">
+      <p>CONSTELLATION<br>ROLEPLAY EVENT</p>
+      <p><strong>12TH &amp; 24TH</strong><br>MONTHLY 22:00 – 23:00</p>
+      <p>SOMEWHERE IN<br>THE NIGHT SKY</p>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ==================== hero ==================== -->
+    <section class="hero">
+      <div class="hero-image" id="heroImage" aria-hidden="true"></div>
+      <p class="hero-word" aria-hidden="true">SALTALIA</p>
+
+      <div class="hero-inner">
+        <p class="hero-eyebrow">CONSTELLATION ROLEPLAY EVENT</p>
+        <h1>
+          <span class="line"><span>星と人が、</span></span>
+          <span class="line"><span>同じ夜空で語り合う宴。</span></span>
+        </h1>
+        <p class="hero-lead">
+          観測者により開かれた、星空の狭間に浮かぶ小さな宴の場。<br>
+          ここでは、星座の意志が形を持った存在――<ruby>星導<rt>ほしるべ</rt></ruby>たちが、<br>
+          招待状を受け取ったあなたの言葉を待っている。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#invitation">招待状を開く<span class="arrow">→</span></a>
+          <a class="btn btn-line" href="#event">開催概要を見る<span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <p class="hero-side" aria-hidden="true">星々の言葉に、耳を傾けて。</p>
+
+      <div class="hero-foot">
+        <span class="copy">© SALTALIA</span>
+        <span class="scroll-cue">SCROLL</span>
+        <span class="copy">MONTHLY 12TH &amp; 24TH</span>
+      </div>
+    </section>
+
+    <!-- ==================== marquee ==================== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>招待状は夜に届く</span><em>✦</em>
+        <span>星導はまだ名を隠している</span><em>✦</em>
+        <span>観測者はたぶん見ている</span><em>✦</em>
+        <span>あなたの一言で星が揺れる</span><em>✦</em>
+        <span>招待状は夜に届く</span><em>✦</em>
+        <span>星導はまだ名を隠している</span><em>✦</em>
+        <span>観測者はたぶん見ている</span><em>✦</em>
+        <span>あなたの一言で星が揺れる</span><em>✦</em>
+      </div>
+    </div>
+
+    <!-- ==================== 01 story ==================== -->
+    <section class="chapter" id="story">
+      <p class="chapter-ghost" aria-hidden="true">01</p>
+      <div class="chapter-head reveal">
+        <p class="chapter-num">CHAPTER 01</p>
+        <h2 class="chapter-title">世界観<small>World of Saltalia</small></h2>
+      </div>
+      <div class="story-layout">
+        <div class="story-text">
+          <p class="reveal">
+            観測者により開かれた、星空の狭間に浮かぶ小さな宴の場。<br>
+            そこでは、星座の意志が形を持った存在――「星導」と呼ばれる者たちが集っていた。
+          </p>
+          <p class="reveal" style="--d:.1s">
+            彼らはそれぞれの願い、退屈、喪失、好奇心、あるいは言葉にならない何かを胸に、<br>
+            人である来訪者と語り合うため、今日も夜の席につく。
+          </p>
+          <p class="reveal" style="--d:.15s">
+            あなたは観測者に選ばれた客人。<br>
+            正解を探す必要はない。<br>
+            ただ名前を告げ、好きなものを話し、気になったことを尋ねるだけで、星は少しだけ表情を変える。
+          </p>
+          <p class="em reveal" style="--d:.2s">
+            それは占いでも、物語でもない。<br>
+            星と人が、同じ夜空を見上げながら交わす対話。<br>
+            まだ観測者も知らない結末が、あなたの言葉で変わるかもしれない。
+          </p>
+        </div>
+        <div class="story-visual reveal" style="--d:.15s">
+          <div class="constellation">
+            <svg viewBox="0 0 300 240" role="img" aria-label="星座をイメージした装飾線">
+              <polyline points="48,158 102,72 156,115 208,48 255,139" />
+              <polyline points="102,72 112,178 208,48" />
+            </svg>
+            <i></i><i></i><i></i><i></i><i></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 02 invitation ==================== -->
+    <section class="chapter invitation-section" id="invitation">
+      <p class="chapter-ghost" aria-hidden="true">02</p>
+      <div class="chapter-head reveal">
+        <p class="chapter-num">CHAPTER 02</p>
+        <h2 class="chapter-title">観測者からの招待状<small>Invitation</small></h2>
+      </div>
+      <article class="invitation-card reveal">
+        <p class="seal" aria-hidden="true">✦</p>
+        <p class="letter-label">To the Visitor</p>
+        <h3>夜空の狭間に、席をひとつ用意しました。</h3>
+        <p>
+          もしこの案内を見つけたのなら、それは偶然ではなく、観測の結果かもしれません。<br>
+          宴では、あなたの肩書きも、強さも、特別な知識も必要ありません。<br>
+          必要なのは、星の話を聞いてみたいという少しの好奇心だけです。
+        </p>
+        <p>
+          名前をまだ明かさない星導たちも、遠くからあなたの来訪を待っています。<br>
+          扉の向こうで交わす一言が、その夜だけの星図になるかもしれません。
+        </p>
+        <div class="letter-signature">
+          <span>Observer's Note</span>
+          <strong>扉が開いたら、どうか一歩だけ。</strong>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==================== 03 lore ==================== -->
+    <section class="chapter" id="lore">
+      <p class="chapter-ghost" aria-hidden="true">03</p>
+      <div class="chapter-head reveal">
+        <p class="chapter-num">CHAPTER 03</p>
+        <h2 class="chapter-title">このセカイのことば<small>Glossary</small></h2>
+      </div>
+      <div class="index-rows">
+        <div class="index-row reveal">
+          <span class="no">No. 01</span>
+          <h3 class="ttl">Saltalia<small>The Banquet</small></h3>
+          <p class="desc">不定期で観測者により開催される宴。<br>星導が集合し、世界をひとつ選び、招待して話をする場。<br>今回は、ヒトの住む世界が選ばれた。</p>
+          <span class="mark">→</span>
+        </div>
+        <div class="index-row reveal" style="--d:.08s">
+          <span class="no">No. 02</span>
+          <h3 class="ttl">観測者<small>The Observer</small></h3>
+          <p class="desc">このセカイができた時から既にいる、宴の主催者。<br>気さくで友好的であり、セカイを象徴する大きな盤によって、いつでも状況を観測できる。<br>たまに、見ていないふりもする。</p>
+          <span class="mark">→</span>
+        </div>
+        <div class="index-row reveal" style="--d:.16s">
+          <span class="no">No. 03</span>
+          <h3 class="ttl">来訪者<small>The Visitor</small></h3>
+          <p class="desc">人の世界の中から選ばれ、招待状を受け取った客人。<br>星導たちと同じ夜空を見上げながら、言葉を交わす。<br>あなたの言葉が、その夜だけの星図になる。</p>
+          <span class="mark">→</span>
+        </div>
+        <div class="index-row reveal" style="--d:.24s">
+          <span class="no">No. 04</span>
+          <h3 class="ttl">星導<small>Hoshirube</small></h3>
+          <p class="desc">星座の意思が形を成した存在。<br>現星導が活動不能となった時、観測者によって選ばれ、半永久的な寿命と望みをひとつ授かる。<br>人間と話しやすいよう、人に近い見た目をしている。</p>
+          <span class="mark">→</span>
+        </div>
+        <div class="index-row reveal" style="--d:.32s">
+          <span class="no">No. 05</span>
+          <h3 class="ttl">星影<small>Hoshikage</small></h3>
+          <p class="desc">観測者によって作られた生命体。<br>宴を見守り、来訪者が星々と出会うための道しるべとなる。<br>迷ったら、たぶん彼らのほうが先に気づいてくれる。</p>
+          <span class="mark">→</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 04 cast ==================== -->
+    <section class="chapter coming-soon-section" id="cast">
+      <p class="chapter-ghost" aria-hidden="true">04</p>
+      <div class="chapter-head reveal">
+        <p class="chapter-num">CHAPTER 04</p>
+        <h2 class="chapter-title">星導たち<small>Cast</small></h2>
+      </div>
+
+      <article class="coming-soon-card reveal">
+        <div class="soon-orbit" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="soon-copy">
+          <p class="role">CAST PREVIEW</p>
+          <h3 class="cast-name">キャストページは、準備中。</h3>
+          <p class="cast-name-en">COMING SOON</p>
+          <p class="cast-catch">今はまだ、星の帳の向こう側。</p>
+          <p>
+            キャストの名前・姿・詳細プロフィールは、ただいま準備中です。<br>
+            どの星があなたを迎えるのか。<br>
+            どうか少しだけ、楽しみに待っていてください。
+          </p>
+          <div class="teaser-list">
+            <span>名前：未観測</span>
+            <span>星座：未観測</span>
+            <span>願い：観測不能</span>
+          </div>
+          <ul class="cast-tags">
+            <li>COMING SOON</li>
+            <li>ページ準備中</li>
+            <li>星導名簿は未観測</li>
+            <li>星の帳の向こう側</li>
+          </ul>
+          <a class="text-link" href="cast.html">TEASER PAGE<span class="arrow">→</span></a>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==================== 05 event ==================== -->
+    <section class="chapter" id="event">
+      <p class="chapter-ghost" aria-hidden="true">05</p>
+      <div class="chapter-head reveal">
+        <p class="chapter-num">CHAPTER 05</p>
+        <h2 class="chapter-title">開催概要<small>Event Information</small></h2>
+      </div>
+      <div class="event-layout">
+        <div class="reveal">
+          <p class="event-date">12<b>th</b> &amp; 24<b>th</b><small>MONTHLY — 22:00 / 23:00 JST</small></p>
+          <p class="event-desc">
+            Saltaliaは、星導と来訪者が2対2で会話を交わす体験型ロールプレイイベント。<br>
+            1ローテ20分で、開催中に2回のローテーションを行います。<br>
+            星導と来訪者が、その夜だけの言葉を交わす時間です。
+          </p>
+          <dl class="event-facts">
+            <div><dt>開催日</dt><dd>毎月12日・24日</dd></div>
+            <div><dt>時間</dt><dd>22:00〜23:00</dd></div>
+            <div><dt>形式</dt><dd>2対2 ／ 20分1ローテ</dd></div>
+            <div><dt>雰囲気</dt><dd>会話重視 / 物語体験 / 初見歓迎</dd></div>
+          </dl>
+        </div>
+        <ol class="timeline reveal" style="--d:.15s">
+          <li><time>21:55</time><p>リクイン受付。<br>招待状を手に、扉の前へ。</p></li>
+          <li><time>22:00</time><p>イベント開始。<br>星導との対話がはじまります。</p></li>
+          <li><time>23:00</time><p>イベント終了。<br>見上げた空が、少し違って見えたら成功です。</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==================== 06 visit ==================== -->
+    <section class="visit" id="visit">
+      <p class="chapter-num reveal">CHAPTER 06 — VISITOR GUIDE</p>
+      <h2 class="reveal">夜空の狭間へ、<br>ようこそ。</h2>
+      <p class="reveal" style="--d:.1s">
+        招待状を受け取った来訪者として、星導たちとの対話を楽しむ宴。<br>
+        まだ伏せられた星の気配を感じながら、同じ夜空に耳を傾けて。
+      </p>
+      <div class="visit-meta reveal" style="--d:.18s">
+        <span>開催<b>毎月12日・24日 22:00〜23:00</b></span>
+        <span>舞台<b>星空の狭間に浮かぶ宴の場</b></span>
+        <span>参加<b>招待状を受け取った来訪者</b></span>
+      </div>
+      <div class="reveal" style="--d:.26s">
+        <a class="btn btn-gold" href="#event">開催概要を見る<span class="arrow">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-word" aria-hidden="true">SALTALIA</p>
+    <div class="footer-bar">
+      <p>© SALTALIA — 星々の言葉に、耳を傾けて。</p>
+      <nav aria-label="フッターメニュー">
+        <a href="#story">世界観</a>
+        <a href="#invitation">招待状</a>
+        <a href="#cast">星導</a>
+        <a href="#event">開催概要</a>
+      </nav>
+      <a class="to-top" href="#top">BACK TO TOP ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

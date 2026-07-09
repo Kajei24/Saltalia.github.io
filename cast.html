@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>キャスト紹介｜Saltalia</title>
+  <meta name="description" content="Saltalia キャスト紹介ページ。キャストページは準備中です。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Shippori+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+  <div class="sky" aria-hidden="true">
+    <canvas id="starCanvas"></canvas>
+    <div class="sky-glow-1"></div>
+    <div class="sky-glow-2"></div>
+  </div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html"><i>✦</i>SALTALIA</a>
+    <div class="header-meta">
+      <span class="label">CONSTELLATION BANQUET</span>
+      <span class="clock" id="clock">--:--:--</span>
+      <button class="menu-btn" type="button" aria-label="メニュー" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="menu" aria-label="メインメニュー">
+    <div class="menu-nav compact-nav">
+      <a href="index.html#story"><em>01</em>世界観</a>
+      <a href="index.html#invitation"><em>02</em>招待状</a>
+      <a href="index.html#lore"><em>03</em>ことば</a>
+      <a href="index.html#cast"><em>04</em>星導たち</a>
+      <a href="index.html#event"><em>05</em>開催概要</a>
+      <a href="cast.html"><em>––</em>キャスト紹介（準備中）</a>
+    </div>
+    <div class="menu-aside">
+      <p>CONSTELLATION<br>ROLEPLAY EVENT</p>
+      <p><strong>12TH &amp; 24TH</strong><br>MONTHLY 22:00 – 23:00</p>
+      <p>SOMEWHERE IN<br>THE NIGHT SKY</p>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero teaser-hero">
+      <p class="hero-word" aria-hidden="true">CAST</p>
+      <p class="hero-eyebrow">CAST INTRODUCTION / UNOBSERVED</p>
+      <h1 class="reveal is-visible">キャスト紹介</h1>
+      <p class="lead-center reveal is-visible">
+        星々の意志を宿し、宴の夜に現れる者たち。<br>
+        現在、彼らの姿はまだ星の帳の向こう側にあります。
+      </p>
+    </section>
+
+    <section class="chapter coming-soon-section" id="coming-soon">
+      <article class="coming-soon-card reveal is-visible">
+        <div class="soon-orbit" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="soon-copy">
+          <p class="role">CAST PREVIEW</p>
+          <h2 class="cast-name">キャストページ準備中</h2>
+          <p class="cast-name-en">COMING SOON</p>
+          <p class="cast-catch">今はまだ、名前を呼ばないで。</p>
+          <p>
+            Saltaliaのキャストページは、ただいま準備中です。<br>
+            ここでは、キャストの名前・姿・プロフィールをまだ掲載していません。<br>
+            扉がひらくその夜まで、星の気配だけをそっと置いておきます。
+          </p>
+          <div class="teaser-list">
+            <span>星図：未観測</span>
+            <span>名前：未観測</span>
+            <span>第一声：観測待ち</span>
+          </div>
+          <ul class="cast-tags">
+            <li>COMING SOON</li>
+            <li>キャストページ準備中</li>
+            <li>星導名簿は未観測</li>
+            <li>星の帳の向こう側</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="chapter notes-section">
+      <div class="chapter-head reveal">
+        <p class="chapter-num">UNOBSERVED NOTES</p>
+        <h2 class="chapter-title">星導名簿の余白<small>Hidden Cast Book</small></h2>
+      </div>
+      <div class="note-board">
+        <p class="note reveal">ページはあります。<br>けれど、名前はまだありません。</p>
+        <p class="note reveal" style="--d:.08s">星座は隠されています。<br>ヒントは、夜の中に少しだけ。</p>
+        <p class="note reveal" style="--d:.16s">ページが開いた日、ここに星導たちの言葉が灯ります。</p>
+        <p class="note reveal" style="--d:.24s">それまでこのページは、静かな待合室です。</p>
+      </div>
+    </section>
+
+    <section class="chapter" id="event">
+      <div class="chapter-head reveal">
+        <p class="chapter-num">EVENT INFO</p>
+        <h2 class="chapter-title">開催概要<small>Event Information</small></h2>
+      </div>
+      <div class="event-layout">
+        <div class="reveal">
+          <p class="event-date">12<b>th</b> &amp; 24<b>th</b><small>MONTHLY — 22:00 / 23:00 JST</small></p>
+          <p class="event-desc">
+            2対2で星導と来訪者が会話する体験型ロールプレイイベント。<br>
+            1ローテ20分で、開催中に2回のローテーションを行います。
+          </p>
+        </div>
+        <ol class="timeline reveal" style="--d:.15s">
+          <li><time>21:55</time><p>リクイン受付。<br>招待状を手に、扉の前へ。</p></li>
+          <li><time>22:00</time><p>イベント開始</p></li>
+          <li><time>23:00</time><p>イベント終了</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="back-center reveal">
+      <a class="btn btn-gold" href="index.html">トップページへ戻る<span class="arrow">→</span></a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-word" aria-hidden="true">SALTALIA</p>
+    <div class="footer-bar">
+      <p>© SALTALIA — 星々の言葉に、耳を傾けて。</p>
+      <nav aria-label="フッターメニュー">
+        <a href="index.html#story">世界観</a>
+        <a href="index.html#invitation">招待状</a>
+        <a href="index.html#event">開催概要</a>
+      </nav>
+      <a class="to-top" href="#top">BACK TO TOP ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
